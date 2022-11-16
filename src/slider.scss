@@ -1,0 +1,133 @@
+@import "custom-media";
+
+.slider {
+  @include padding(110px, 110px);
+  background-image: url("./assets/Points.png");
+  background-position: 14% 70%;
+  background-repeat: no-repeat;
+}
+
+.slider.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__container {
+  width: 1120px;
+  height: 425px;
+  margin: 37px auto;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.slider__line {
+  width: 1120px;
+  height: 425px;
+  background: url("./assets/Points.png")
+  no-repeat right top,
+  linear-gradient(208.18deg,
+      #67C3F3 9.05%, #5A98F2 76.74%);
+  position: relative;
+  transition: all 1s ease 0s;
+}
+
+.slider__title {
+  @include padding(64px, 104px);
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1.33;
+  color: #FFFFFF;
+  background: url("./assets/line-white.png") no-repeat center 150px;
+  text-align: center;
+}
+
+.slider__list {
+  display: flex;
+  gap: 110px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__list:nth-child(1) {
+  display: flex;
+}
+
+.slider__item {
+  height: 120px;
+  width: 400px;
+  display: flex;
+  gap: 29px;
+  align-items: center;
+}
+
+.slider__img {
+  display: block;
+  border-radius: 50%;
+}
+
+.slider__text-box {
+
+}
+
+.slider__text-bold {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.18;
+  color: #FFFFFF;
+}
+
+.slider__text {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #FFFFFFD8;
+
+  &:after {
+    content: '\201d';
+  }
+
+  &:before {
+    content: '\201c';
+  }
+}
+
+.slider__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+}
+
+.slider__btn-left {
+  opacity: 0.4;
+  transform: rotate(-180deg);
+}
+
+.slider__btn {
+  width: 3.2rem;
+  height: 18px;
+  border: none;
+  background-color: #fffffe;
+  background-image: url(./assets/arrow.png);
+  background-repeat: no-repeat;
+}
+
+.slider__points {
+  padding-right: 1rem;
+  display: flex;
+  gap: 18px;
+  width: 104px;
+  height: 10px;
+}
+
+.slider__point {
+  padding-left: 1rem;
+  background-image: url(./assets/Ellipse.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.slicer__new-line {
+  height: 100%;
+}
+

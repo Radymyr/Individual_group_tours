@@ -1,0 +1,35 @@
+@import "custom-media";
+
+.about {
+  @include padding(110px, 110px);
+}
+
+.about__container {
+  display: flex;
+  align-items: center;
+  gap: 137px
+}
+
+.about__img-box {
+  width: 650px;
+}
+
+.about__text-box {
+  width: 486px;
+  background: url("./assets/line.png") no-repeat left 35%;
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1.55;
+  margin-bottom: 59px;
+}
+
+.about__text {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.66;
+  color: #7D7987;
+  margin-bottom: 37px;
+}

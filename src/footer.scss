@@ -1,0 +1,57 @@
+@import "custom-media";
+
+.footer {
+  @include padding(110px, 110px);
+  background: url("./assets/Points.png") no-repeat left bottom, linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 145px;
+}
+
+.footer__content {
+  width: 391px;
+}
+
+.logo--white {
+  margin-bottom: 17px;
+  color: #FFFFFF;
+}
+
+.logo__image--white {
+}
+
+.footer__txt {
+  margin-bottom: 31px;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.56;
+  color: #FFFFFF;
+}
+
+.footer__subtext {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #FFFFFF;
+}
+
+.footer__list {
+}
+
+.footer__item {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.11;
+  color: #FFFFFF;
+}
+
+.footer__item--bold {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3;
+  color: #FFFFFF;
+}

@@ -1,18 +1,18 @@
-const {resolve, join} = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { resolve, join } = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: resolve(__dirname, 'build'),
-    filename: '[name]-[fullhash].js',
+    path: resolve(__dirname, "dist"),
+    filename: "[name]-[fullhash].js",
     clean: true,
   },
   performance: {
     hints: false,
     maxAssetSize: 512000,
-    maxEntrypointSize: 51200
+    maxEntrypointSize: 51200,
   },
   module: {
     rules: [
@@ -22,39 +22,34 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
-            plugins: ["@babel/plugin-transform-runtime"]
-          }
-        }
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-transform-runtime"],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
-        ],
-
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.(html)$/,
-        use: ['html-loader']
+        use: ["html-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
+        type: "asset/resource",
       },
-    ]
+    ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: "./src/index.html",
     }),
 
     new MiniCssExtractPlugin({
-      filename: '[name]-[fullhash].css'
-    })
+      filename: "[name]-[fullhash].css",
+    }),
   ],
 
   devServer: {
@@ -62,10 +57,9 @@ module.exports = {
     compress: true,
     hot: true,
     static: {
-      directory: join(__dirname, 'src')
-    }
+      directory: join(__dirname, "src"),
+    },
   },
 
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
 };
-

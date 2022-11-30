@@ -1,0 +1,34 @@
+@import "custom-media.scss";
+
+.hero {
+  @include padding(6px, 6px);
+}
+
+.header__navigation {
+  @include flex;
+  justify-content: space-between;
+}
+
+.header__logo-box {
+  width: 80px;
+}
+
+.logo {
+  widows: 100%;
+}
+
+.header__list-nav {
+  @include flex;
+  gap: 29px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  color: #05489e;
+}
+
+.header__list-social {
+  @include flex;
+}
+
+.header__item-social {
+  widows: 28px;
+}

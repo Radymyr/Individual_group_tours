@@ -1,0 +1,79 @@
+@import "custom-media.scss";
+
+.payment {
+  @include padding(57px, 64px);
+  background: center/cover no-repeat url("assets/payment-back.png");
+}
+
+.payment__title {
+  font-size: 4rem;
+  line-height: 1.12;
+  color: #ff0000;
+  text-align: center;
+  margin-bottom: 63px;
+  text-shadow: 0px 4px 4px #00000040;
+}
+
+.payment__container {
+  display: flex;
+  gap: 130px;
+}
+.payment__list {
+  width: 731px;
+  @include flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment__item {
+  font-size: 2.6rem;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.payment__item-blue {
+  font-size: 3rem;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  color: #05489e;
+  text-shadow: 0px 4px 4px #00000040;
+}
+
+.payment__img {
+  display: block;
+  margin-top: 17px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.payment__arrow {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.payment__list-transfer {
+  width: 517px;
+  display: flex;
+  flex-direction: column;
+  gap: 84px;
+}
+
+.payment__item-transfer {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.payment__item-transfer-underline {
+  font-size: 2.6rem;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #000000;
+  text-shadow: 0px 4px 4px #00000040;
+}

@@ -1,0 +1,29 @@
+@import "custom-media.scss";
+
+.footer {
+  @include padding(31px, 31px);
+  background: #f1c54db3;
+}
+
+.footer__content {
+  @include flex;
+  justify-content: space-between;
+}
+
+.footer__list-contact {
+  @include flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 595px;
+}
+
+.footer__logo-box {
+  min-width: 183px;
+}
+
+.footer__item-contact {
+  font-size: 3rem;
+  line-height: 1.13;
+  letter-spacing: 0.07em;
+  color: #000000;
+}

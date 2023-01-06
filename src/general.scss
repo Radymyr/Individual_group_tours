@@ -3,16 +3,16 @@
 @font-face {
   font-family: georgia;
   font-weight: 700;
-  font-style: normal;
-  src: url("fonts/Georgia700.woff2") format("woff2");
+  font-style: italic;
+  src: url("fonts/georgia700.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: georgia;
   font-weight: 400;
-  font-style: normal;
-  src: url("fonts/Georgia400.woff2") format("woff2");
+  font-style: italic;
+  src: url("fonts/georgia400.woff") format("woff");
   font-display: swap;
 }
 
@@ -24,12 +24,14 @@ body,
 html {
   font-family: georgia, sans-serif;
   font-weight: 700;
+  font-style: italic;
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .container {
-  width: 1400px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 

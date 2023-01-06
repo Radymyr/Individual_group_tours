@@ -1,0 +1,49 @@
+@import "custom-media.scss";
+
+.reviews {
+  @include padding(48px, 121px);
+  background: left bottom no-repeat url("assets/plant-rewiews.png");
+}
+
+.reviews__title {
+  font-size: 3rem;
+  line-height: 1.13;
+  letter-spacing: 0.07em;
+  color: #ff0000;
+  text-shadow: 0px 4px 4px #00000040;
+  margin-bottom: 84px;
+  text-align: center;
+}
+
+.swiper-slide__title {
+  background: #f1c54d;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 377px;
+  height: auto;
+  font-size: 3rem;
+  line-height: 1.13;
+  letter-spacing: 0.07em;
+  color: #05489e;
+  padding: 25px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.swiper-slide {
+  background: #c1dedcc4;
+  border-radius: 30px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide__description {
+  font-size: 3rem;
+  line-height: 1.13;
+  letter-spacing: 0.07em;
+  color: #000000;
+  text-shadow: 0px 4px 4px #00000040;
+  padding: 50px 100px;
+}

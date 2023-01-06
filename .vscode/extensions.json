@@ -1,6 +1,7 @@
 {
-    "recommendations": [
-        "ms-vsliveshare.vsliveshare",
-        "dbaeumer.jshint"
-    ]
+  "recommendations": [
+    "ms-vsliveshare.vsliveshare",
+    "dbaeumer.jshint",
+    "streetsidesoftware.code-spell-checker-ukrainian"
+  ]
 }

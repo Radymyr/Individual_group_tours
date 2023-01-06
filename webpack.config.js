@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const { resolve, join } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -43,6 +44,8 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
@@ -53,6 +56,7 @@ module.exports = {
   ],
 
   devServer: {
+    historyApiFallback: true,
     port: 8080,
     compress: true,
     hot: true,

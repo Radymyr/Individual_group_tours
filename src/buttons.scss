@@ -1,22 +1,69 @@
-.btn {
-  min-width: 200px;
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 3.33;
-  color: #458FF6;
-  border-radius: 56px;
-  border: 1.4px solid #458FF6;
-  background-color: #FFFFFF;
-}
-.btn--shadow {
-  filter: drop-shadow(0px 4px 4px #0000003F);
+.hero__btn {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 2.4rem;
+  line-height: 1.12;
+  text-align: center;
+  letter-spacing: 0.02em;
+  background-color: #d8c97c;
+  color: #05489e;
+  border: 1px solid #05489e;
+  text-decoration: none;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 
-.btn--blue {
-  min-width: 200px;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #FFFFFF;
-  background-color:  #458FF6;
-  border: none;
+.hero__btn:hover {
+  background: #d8c97c;
+  box-shadow: 0 15px 20px #1e1f1e66;
+  color: white;
+  transform: translateY(-7px);
+}
+
+.buttons {
+  position: absolute;
+  right: 110px;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  width: 35px;
+  height: 28px;
+  border-radius: 10px;
+  margin: 10px 20px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #524f4e;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #d8c97c;
+  box-shadow: 0 15px 20px #1e1f1e66;
+  color: white;
+  transform: translateY(-7px);
+}
+
+.reviews__btn {
+  min-width: 76px;
+  padding: 38px 10px;
+  border-radius: 50%;
+}
+
+.blogs__buttons {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.blogs__btn {
+  min-width: 102px;
+  padding: 16px 20px;
+  border-radius: 20px;
 }

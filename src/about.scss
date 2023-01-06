@@ -1,0 +1,51 @@
+@import "custom-media.scss";
+
+.about {
+  @include padding(41px, 80px);
+  background-color: white;
+  background: left bottom no-repeat url("assets/plant.png"),
+    right top no-repeat url("assets/plant2.png");
+}
+
+.about__title {
+  font-size: 3.5rem;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: #ff0000;
+  text-shadow: 0px 4px 4px #00000040;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about__content {
+  @include flex;
+  gap: 35px;
+}
+
+.about__img-box {
+  width: 512px;
+  align-self: baseline;
+}
+
+.about__img {
+  width: 100%;
+}
+
+.about__list {
+  @include flex;
+  flex-direction: column;
+  width: 773px;
+  gap: 75px;
+}
+
+.about__item {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  color: #000000;
+  text-shadow: 0px 4px 4px #00000040;
+}
+
+.about__item-blue {
+  color: #05489e;
+}

@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 max-scale=1.0 min-scale=1.0"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -43,10 +46,14 @@
                     </a>
                   </li>
                 </ul>
-                <div class="buttons">
+                <div class="burger">
                   <button class="button">EN</button>
+                  <button class="burger-button">
+                    <img src="assets/burger.png" alt="burger" />
+                  </button>
                 </div>
-                <ul class="social-list">
+
+                <ul class="social-list social-list--top">
                   <li class="social-list__item">
                     <a
                       target="_blank"
@@ -94,6 +101,29 @@
             </div>
           </div>
         </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a data-lang="hero.list.item.aboutme" href="#aboutme">Про мене</a>
+            </li>
+            <li class="nav__item">
+              <a data-lang="hero.list.item.aboutpay" href="#aboutpay">
+                Як оплачувати
+              </a>
+            </li>
+            <li class="nav__item">
+              <a data-lang="hero.list.item.reviews" href="#reviews">Відгуки</a>
+            </li>
+            <li class="nav__item">
+              <a data-lang="hero.list.item.blogs" href="#blogs">Блог</a>
+            </li>
+            <li class="nav__item">
+              <a data-lang="hero.list.item.contact" href="#contact">
+                Контакти
+              </a>
+            </li>
+          </ul>
+        </nav>
         <div class="container">
           <div class="hero__container">
             <div class="hero__content">
@@ -267,7 +297,6 @@
       </section>
       <!-- end payment  -->
       <!-- start Reviews -->
-      <!-- решить вопрос с английским -->
       <section class="reviews">
         <div class="container">
           <h3 id="reviews" data-lang="reviews.title" class="reviews__title">
@@ -294,6 +323,7 @@
                 <p
                   data-lang="swiper.description"
                   class="swiper-slide__description"
+                  id="descriptin"
                 >
                   Безумно понравилось обслуживание и предоставленный тур!
                   Спасибо ОГРОМНОЕ! Всем советую!

@@ -12,6 +12,19 @@
   text-decoration: none;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+
+  @include media-1350 {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  @include media-992 {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+  @include media-420 {
+    font-size: 1rem;
+  }
 }
 
 .hero__btn:hover {
@@ -21,9 +34,35 @@
   transform: translateY(-7px);
 }
 
-.buttons {
+.burger {
   position: absolute;
   right: 110px;
+
+  @include media-1350 {
+    position: initial;
+    @include flex;
+  }
+}
+
+.burger-button {
+  padding: 5px;
+  display: none;
+
+  @include media-1200 {
+    display: inline-block;
+  }
+  @include media-420 {
+    max-width: 40px;
+    max-width: 40px;
+  }
+}
+
+.burger-button img {
+  width: 100%;
+}
+
+.burger-button-open {
+  box-shadow: 2px 2px 4px #000000;
 }
 
 .button {
@@ -40,6 +79,10 @@
   color: #524f4e;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+
+  @include media-1350 {
+    font-size: 1rem;
+  }
 }
 
 .button:hover {
@@ -53,6 +96,10 @@
   min-width: 76px;
   padding: 38px 10px;
   border-radius: 50%;
+
+  @include media-768 {
+    display: none;
+  }
 }
 
 .blogs__buttons {
@@ -60,10 +107,21 @@
   margin-right: auto;
   display: flex;
   justify-content: center;
+
+  @include media-768 {
+    display: none;
+  }
 }
 
 .blogs__btn {
   min-width: 102px;
   padding: 16px 20px;
   border-radius: 20px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @include media-768 {
+    display: none;
+  }
 }

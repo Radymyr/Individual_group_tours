@@ -1,0 +1,26 @@
+.nav {
+  display: none;
+  position: absolute;
+  right: -250px;
+  height: 100%;
+  transition: 0.5s;
+  background-color: #f1c54dde;
+  padding: 20px;
+
+  @include media-992 {
+    height: 78%;
+  }
+}
+
+.menu-open {
+  right: 0;
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  text-align: center;
+  justify-content: center;
+}

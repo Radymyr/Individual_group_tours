@@ -3,11 +3,24 @@
 .footer {
   @include padding(31px, 31px);
   background: #f1c54db3;
+
+  @include media-1350 {
+    @include padding(20px, 20px);
+  }
 }
 
 .footer__content {
   @include flex;
   justify-content: space-between;
+
+  @include media-992 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+  @include media-768 {
+    gap: 20px;
+  }
 }
 
 .footer__list-contact {
@@ -19,6 +32,11 @@
 
 .footer__logo-box {
   min-width: 183px;
+
+  @include media-420 {
+    min-width: inherit;
+    max-width: 120px;
+  }
 }
 
 .footer__item-contact {
@@ -26,4 +44,17 @@
   line-height: 1.13;
   letter-spacing: 0.07em;
   color: #000000;
+
+  @include media-1350 {
+    font-size: 2.5rem;
+  }
+  @include media-992 {
+    font-size: 2rem;
+  }
+  @include media-768 {
+    font-size: 1.8rem;
+  }
+  @include media-420 {
+    font-size: 1.4rem;
+  }
 }

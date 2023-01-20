@@ -14,10 +14,18 @@
   justify-content: space-between;
   gap: 20px;
   position: relative;
+
+  @include media-420 {
+    gap: 15px;
+  }
 }
 
 .header__logo-box {
   min-width: 183px;
+
+  @include media-420 {
+    min-width: 120px;
+  }
 }
 
 .logo {
@@ -27,16 +35,41 @@
 .header__list-nav {
   @include flex;
   gap: 29px;
+  color: #05489e;
+  @include media-1350 {
+    gap: 20px;
+  }
+  @include media-1200 {
+    display: none;
+  }
+  @include media-420 {
+    gap: 15px;
+  }
+}
+.header__item a,
+.nav__item a {
   font-size: 2.4rem;
   line-height: 1.25;
-  color: #05489e;
-}
-.header__item a {
-  border-radius: 5px;
   display: inline-block;
   text-decoration: none;
   color: #05489e;
   transition: 0.3s;
+
+  @include media-1350 {
+    font-size: 2rem;
+  }
+  @include media-992 {
+    font-size: 1.8rem;
+  }
+  @include media-420 {
+    font-size: 1.4rem;
+  }
+}
+
+.nav__item a:hover {
+  background: none;
+  color: white;
+  transform: translateY(-7px);
 }
 
 .header__item a:hover {
@@ -48,6 +81,16 @@
 .social-list {
   @include flex;
   gap: 17px;
+
+  @include media-420 {
+    gap: 10px;
+  }
+}
+
+.social-list--top {
+  @include media-1200 {
+    display: none;
+  }
 }
 
 .social-list__item a {
@@ -66,26 +109,62 @@
 
 .social-list__item--viber {
   display: none;
+
+  @include media-992 {
+    display: inline-block;
+  }
 }
 
 .social-list__img {
   width: 100%;
 }
+
+.hero__container {
+  padding-top: 20px;
+}
+
 .hero__content {
   @include flex;
+  @include media-1200 {
+    flex-direction: column;
+    padding-bottom: 28px;
+  }
+  @include media-992 {
+    padding-bottom: 19px;
+  }
 }
+
 .hero__text-box {
   width: 900px;
+
+  @include media-1200 {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .hero__photo-box {
   min-width: 450px;
   position: relative;
-  right: 70px;
+  right: 50px;
+
+  @include media-1200 {
+    right: -60px;
+    align-self: end;
+    min-width: auto;
+  }
+
+  @include media-992 {
+    height: 500px;
+  }
 }
 
 .hero__photo {
   width: 100%;
+  @include media-992 {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .hero__txt {
@@ -94,6 +173,20 @@
   letter-spacing: 0.05em;
   color: #05489e;
   margin-bottom: 12px;
+
+  @include media-1350 {
+    font-size: 3rem;
+    margin-bottom: 8px;
+  }
+  @include media-992 {
+    font-size: 2.5rem;
+  }
+  @include media-768 {
+    font-size: 2rem;
+  }
+  @include media-420 {
+    font-size: 1.8rem;
+  }
 }
 
 .hero__title {
@@ -105,6 +198,28 @@
   color: #ff0000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 86px;
+
+  @include media-1350 {
+    font-size: 6.5rem;
+    margin-bottom: 70px;
+  }
+
+  @include media-1200 {
+    min-width: auto;
+    margin-bottom: 40px;
+  }
+
+  @include media-992 {
+    font-size: 6rem;
+    margin-bottom: 30px;
+  }
+  @include media-768 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+  }
+  @include media-420 {
+    font-size: 4rem;
+  }
 }
 
 .hero__description {
@@ -114,4 +229,23 @@
   letter-spacing: 0.1em;
   color: #05489e;
   margin-bottom: 86px;
+
+  @include media-1350 {
+    font-size: 2rem;
+    margin-bottom: 70px;
+  }
+
+  @include media-1200 {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  @include media-992 {
+    font-size: 1.8rem;
+  }
+  @include media-768 {
+    margin-bottom: 20px;
+  }
+  @include media-420 {
+    font-size: 1.4rem;
+  }
 }

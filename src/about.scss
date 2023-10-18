@@ -46,7 +46,8 @@
 
 .about__content {
   @include flex;
-  gap: 35px;
+  flex-direction: column;
+  gap: 20px;
 
   @include media-768 {
     flex-direction: column;
@@ -75,11 +76,7 @@
   @include flex;
   flex-direction: column;
   width: 773px;
-  gap: 75px;
-
-  @include media-1200 {
-    gap: 50px;
-  }
+  gap: 50px;
 
   @include media-992 {
     width: 100%;

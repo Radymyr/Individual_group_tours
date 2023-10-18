@@ -13,7 +13,7 @@
   @include flex;
   justify-content: space-between;
 
-  @include media-992 {
+  @include media-1200 {
     flex-direction: column;
     justify-content: center;
     gap: 30px;

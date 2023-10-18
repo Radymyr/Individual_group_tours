@@ -82,7 +82,7 @@
   @include flex;
   gap: 17px;
 
-  @include media-420 {
+  @include media-1200 {
     gap: 10px;
   }
 }

@@ -1,56 +1,56 @@
-"use strict";
+'use strict';
 
-import { swiper } from "./index";
+import { swiper } from './index';
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const dictionary = {
     uk: {
-      "hero.list.item.aboutme": "Про мене",
-      "hero.list.item.aboutpay": "Як оплачувати",
-      "hero.list.item.reviews": "Відгуки",
-      "hero.list.item.blogs": "Блог",
-      "hero.list.item.contact": "Контакти",
-      "hero.txt": "Ваш тревел агент",
-      "hero.title": "Тетяна Ломакіна",
-      "hero.description":
-        "Знаходжу найкоротший шлях від запитання «де відпочити» до відповіді!",
-      "hero.link.btn": "Підбір та супроводження вашої подорожі!",
-      "about.aboutme": "Про мене",
-      "about.list.item.aboutme":
-        "Вітаю Вас, дорогий відвідувач сайту! Мене звуть Тетяна Ломакіна. Я займаюся туристичною діяльністю з 2000 року. Тобто, мій досвід роботи більше 20 років.",
-      "about.list.item.agency":
-        "З березня 2013 року я працюю як приватний підприємець - Агенція IGtours (Individual & Group tours).",
-      "about.list.item.description":
-        "За цей час встигла відвідати 37 країн та деякі не один раз. Я дуже люблю свою роботу та люблю людей, постійно працюю над собою та вдосконалюю свої знання.",
-      "about.list.item.partnership":
-        "З багатьма клієнтами підтримаємо дружні стосунки i в нас вже співтовариство! 🙂",
-      "about.list.item.mission":
-        "Основна моя місія - найти коротший шлях від запитання - де відпочити- до відповіді! До відповіді, яка задовольнить замовника та зробить щасливими обидві сторони 🙂!",
-      "about.list.item.wishes":
-        "Кожна нова подорож робить нас трошки іншими. То нехай ми будемо змінюватися тільки на краще!",
-      "payment.title.pay": "Як оплачувати",
-      "payment.list.item.pay":
-        "Після того як ми знайшли найкращий варіант відпочинку, виникає питання його оплати.",
-      "payment.list.item.aboutpay":
-        "Оплата за тур приймається виключно в національній валюті (гривня). Для банківських карток, номінованих в інших валютах курс конвертації визначається платіжною системою та Вашим банком.",
-      "payment.list.item.qr": `Чи скористайтесь 
+      'hero.list.item.aboutme': 'Про мене',
+      'hero.list.item.aboutpay': 'Як оплачувати',
+      'hero.list.item.reviews': 'Відгуки',
+      'hero.list.item.blogs': 'Блог',
+      'hero.list.item.contact': 'Контакти',
+      'hero.txt': 'Ваш тревел агент',
+      'hero.title': 'Тетяна Ломакіна',
+      'hero.description':
+        'Знаходжу найкоротший шлях від запитання «де відпочити» до відповіді!',
+      'hero.link.btn': 'Підбір та супроводження вашої подорожі!',
+      'about.aboutme': 'Про мене',
+      'about.list.item.aboutme':
+        'Вітаю Вас, дорогий відвідувач сайту! Мене звуть Тетяна Ломакіна. Я займаюся туристичною діяльністю з 2000 року. Тобто, мій досвід роботи більше 20 років.',
+      'about.list.item.agency':
+        'З березня 2013 року я працюю як приватний підприємець - Агенція IGtours (Individual & Group tours).',
+      'about.list.item.description':
+        'За цей час встигла відвідати 37 країн та деякі не один раз. Я дуже люблю свою роботу та люблю людей, постійно працюю над собою та вдосконалюю свої знання.',
+      'about.list.item.partnership':
+        'З багатьма клієнтами підтримаємо дружні стосунки i в нас вже співтовариство! 🙂',
+      'about.list.item.mission':
+        'Основна моя місія - найти коротший шлях від запитання - де відпочити- до відповіді! До відповіді, яка задовольнить замовника та зробить щасливими обидві сторони 🙂!',
+      'about.list.item.wishes':
+        'Кожна нова подорож робить нас трошки іншими. То нехай ми будемо змінюватися тільки на краще!',
+      'payment.title.pay': 'Як оплачувати',
+      'payment.list.item.pay':
+        'Після того як ми знайшли найкращий варіант відпочинку, виникає питання його оплати.',
+      'payment.list.item.aboutpay':
+        'Оплата за тур приймається виключно в національній валюті (гривня). Для банківських карток, номінованих в інших валютах курс конвертації визначається платіжною системою та Вашим банком.',
+      'payment.list.item.qr': `Чи скористайтесь
     QR code (через Приват24)`,
-      "payment.list.item.transfer": "Реквізити компанії IGTours",
-      "payment.list.item.transfer.provider":
-        "Постачальник: ФОП Ломакіна Тетяна Володимирівна",
-      "payment.list.item.transfer.check":
-        "Розрахунковий рахунок: UA613052990000026009050251687",
-      "payment.list.item.transfer.bank": "Банк: ПриватБанк, МФО: 305299",
-      "payment.list.item.transfer.number":
-        "Індивідуальний податковий номер (ІПН): 2646412208",
-      "payment.list.item.transfer.phone": `Контактний телефон:`,
-      "reviews.title": "Відгуки",
-      "blogs.title": "Блог",
-      "footer.contact": "Контакти:",
-      "swiper.description":
-        "Безумно понравилось обслуживание и предоставленный тур! Спасибо ОГРОМНОЕ! Всем советую!",
-      "swiper.time": "Август 2017",
-      "blogs.text.spices": `Я давно перестала в качестве сувениров и мелких подарков
+      'payment.list.item.transfer': 'Реквізити компанії IGTours',
+      'payment.list.item.transfer.provider':
+        'Постачальник: ФОП Ломакіна Тетяна Володимирівна',
+      'payment.list.item.transfer.check':
+        'Розрахунковий рахунок: UA613052990000026009050251687',
+      'payment.list.item.transfer.bank': 'Банк: ПриватБанк, МФО: 305299',
+      'payment.list.item.transfer.number':
+        'Індивідуальний податковий номер (ІПН): 2646412208',
+      'payment.list.item.transfer.phone': `Контактний телефон:`,
+      'reviews.title': 'Відгуки',
+      'blogs.title': 'Блог',
+      'footer.contact': 'Контакти:',
+      'swiper.description':
+        'Безумно понравилось обслуживание и предоставленный тур! Спасибо ОГРОМНОЕ! Всем советую!',
+      'swiper.time': 'Август 2017',
+      'blogs.text.spices': `Я давно перестала в качестве сувениров и мелких подарков
     своим многочисленным родственникам и друзьям привозить
     магнитики. Вместо памятных магнитов из разных стран я
     стала привозить специи. Не новость, что именно специи
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     запоминать названия перед поездкой или приобрести специи
     на месте и уже в комплекте - это Ваш выбор, но подарок
     выходит славный.`,
-      "blogs.text.history": `Я всегда любила историю…Историю, как предмет, который
+      'blogs.text.history': `Я всегда любила историю…Историю, как предмет, который
     преподают и истории, как рассказы, которые увлекают и
     уносят в прошлое. Но есть история, в которую можно
     окунуться в реальности, почувствовать её энергетику! Честь
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     здесь будут проводиться. Сентябрь и октябрь- самое
     комфортное время, чтобы совместить отдых на побережье и
     экскурсии. Путешествуйте! Мир прекрасен!`,
-      "blogs.text.istanbul": `Дорогие мои! Ни для кого не секрет, что самостоятельное
+      'blogs.text.istanbul': `Дорогие мои! Ни для кого не секрет, что самостоятельное
     путешествие радует, дарит ощущение невероятной свободы и
     здорово бодрит с Тем, кто заказывает у меня авиатуры в
     Стамбул, да и вообще туры)), всегда подробно рассказываю о
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     догадаться, конечно. Но и понервничать тоже можно
     Предупреждён - значит вооружён! Этот пункт пройден! Далее
     великолепный город Путешествуйте! Мир прекрасен!`,
-      "blogs.text.musicians": `«Памятник Бременским музыкантам»- один из самых популярных
+      'blogs.text.musicians': `«Памятник Бременским музыкантам»- один из самых популярных
     памятников Старого города Риги.
     Выполнен он бременским скульптором Кристой Баумгертель,
     преподнесён Риге в дар городом-побратимом Бременом и
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     сокровенное желание исполняет петух, дотянуться до
     которого сложнее всего. То есть,у меня есть ещё две
     попытки. Путешествуйте! Мир прекрасен!`,
-      "blogs.text.city": `Как влюбиться в Стамбул Пошаговая инструкция  для тех,
+      'blogs.text.city': `Как влюбиться в Стамбул Пошаговая инструкция  для тех,
     кто, как и я, летит в первый раз: На поселиться в
     исторической части города - Султанахмет; посетить открытые
     на данный момент достопримечательности - Топкапы Палас,
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Базилика тоже закрыта. . Гид нам показал альтернативное
     водохранилище . Смотрела видеообзоры блоггеров о нем и
     всё равно и не факт, что нашла бы. Вход в него через
-    магазин ковров  ; 
+    магазин ковров  ;
     .погулять в городских парках и фотографировать 1 тюльпаны
     ₽ . Мы были только в парке Гюльхане. Он находится в
     Султанахмете. На обязательно  советую посетить Долмабахче
@@ -172,56 +172,56 @@ document.addEventListener("DOMContentLoaded", () => {
     салатом и луком в булке за 20 лир) - всё ВКУСНО и
     ещё дикий, необузданный шопинг . А если серьезно, чем бы
     вы ни заняли своё время в этом прекрасном городе, вы
-    вернётесь наполненные позитивом Путешествуйте! Мир 
+    вернётесь наполненные позитивом Путешествуйте! Мир
     прекрасен!`,
     },
     en: {
-      "hero.list.item.aboutme": "About me",
-      "hero.list.item.aboutpay": "How to pay",
-      "hero.list.item.reviews": "Reviews",
-      "hero.list.item.blogs": "Blog",
-      "hero.list.item.contact": "Contacts",
-      "hero.txt": "Your travel agent",
-      "hero.title": "Tatiana Lomakina",
-      "hero.description":
-        "I find the shortest way from the question «where to rest»  to the answer!",
-      "hero.link.btn": "Selection and support of your trip!",
-      "about.aboutme": "About me",
-      "about.list.item.aboutme":
-        "Greetings, dear site visitor! My name is Tatyana Lomakina. I have been engaged in tourism since 2000. That is, my work experience is more than 20 years.",
-      "about.list.item.agency":
-        "Since March 2013, I have been working as a private entrepreneur - Igtours Agency (Individual & Group tours).",
-      "about.list.item.description":
-        "During this time, she managed to visit 37 countries and some more than once. I love my work and people, I am constantly working on myself and improving my knowledge.",
-      "about.list.item.partnership":
-        "We will maintain friendly relations with many customers and we already have a community! 🙂",
-      "about.list.item.mission":
-        "My main mission is to find a shorter way from the question - where to rest - to the answer! To the answer that will satisfy the customer and make both parties happy 🙂!",
-      "about.list.item.wishes":
-        "Each new journey makes us a little different. So let us change only for the better!",
-      "payment.title.pay": "How to pay",
-      "payment.list.item.pay":
-        "After we have found the best vacation option, the question of paying for it arises.",
-      "payment.list.item.aboutpay":
-        "Payment for the tour is accepted exclusively in the national currency (hryvnia). For bank cards denominated in other currencies, the conversion rate is determined by the payment system and your bank.",
-      "payment.list.item.qr": `Do you use the QR code?
+      'hero.list.item.aboutme': 'About me',
+      'hero.list.item.aboutpay': 'How to pay',
+      'hero.list.item.reviews': 'Reviews',
+      'hero.list.item.blogs': 'Blog',
+      'hero.list.item.contact': 'Contacts',
+      'hero.txt': 'Your travel agent',
+      'hero.title': 'Tatiana Lomakina',
+      'hero.description':
+        'I find the shortest way from the question «where to rest»  to the answer!',
+      'hero.link.btn': 'Selection and support of your trip!',
+      'about.aboutme': 'About me',
+      'about.list.item.aboutme':
+        'Greetings, dear site visitor! My name is Tatyana Lomakina. I have been engaged in tourism since 2000. That is, my work experience is more than 20 years.',
+      'about.list.item.agency':
+        'Since March 2013, I have been working as a private entrepreneur - Igtours Agency (Individual & Group tours).',
+      'about.list.item.description':
+        'During this time, she managed to visit 37 countries and some more than once. I love my work and people, I am constantly working on myself and improving my knowledge.',
+      'about.list.item.partnership':
+        'We will maintain friendly relations with many customers and we already have a community! 🙂',
+      'about.list.item.mission':
+        'My main mission is to find a shorter way from the question - where to rest - to the answer! To the answer that will satisfy the customer and make both parties happy 🙂!',
+      'about.list.item.wishes':
+        'Each new journey makes us a little different. So let us change only for the better!',
+      'payment.title.pay': 'How to pay',
+      'payment.list.item.pay':
+        'After we have found the best vacation option, the question of paying for it arises.',
+      'payment.list.item.aboutpay':
+        'Payment for the tour is accepted exclusively in the national currency (hryvnia). For bank cards denominated in other currencies, the conversion rate is determined by the payment system and your bank.',
+      'payment.list.item.qr': `Do you use the QR code?
     (via Privat24)`,
-      "payment.list.item.transfer": "Details of the IGTours company",
-      "payment.list.item.transfer.provider":
-        "Supplier: FOP Lomakina Tetyana Volodymyrivna",
-      "payment.list.item.transfer.check":
-        "Розрахунковий рахунок: UA613052990000026009050251687",
-      "payment.list.item.transfer.bank": "Bank: PrivatBank, MFO: 305299",
-      "payment.list.item.transfer.number":
-        "Individual tax number (TIN): 2646412208",
-      "payment.list.item.transfer.phone": `Contact phone number:`,
-      "reviews.title": "Reviews",
-      "blogs.title": "Blog",
-      "footer.contact": "Contacts:",
-      "swiper.description":
-        "I really liked the service and the provided tour! Thank you HUGE! I advise everyone!",
-      "swiper.time": "August 2017",
-      "blogs.text.spices": `I stopped making souvenirs and small gifts a long time ago
+      'payment.list.item.transfer': 'Details of the IGTours company',
+      'payment.list.item.transfer.provider':
+        'Supplier: FOP Lomakina Tetyana Volodymyrivna',
+      'payment.list.item.transfer.check':
+        'Розрахунковий рахунок: UA613052990000026009050251687',
+      'payment.list.item.transfer.bank': 'Bank: PrivatBank, MFO: 305299',
+      'payment.list.item.transfer.number':
+        'Individual tax number (TIN): 2646412208',
+      'payment.list.item.transfer.phone': `Contact phone number:`,
+      'reviews.title': 'Reviews',
+      'blogs.title': 'Blog',
+      'footer.contact': 'Contacts:',
+      'swiper.description':
+        'I really liked the service and the provided tour! Thank you HUGE! I advise everyone!',
+      'swiper.time': 'August 2017',
+      'blogs.text.spices': `I stopped making souvenirs and small gifts a long time ago
     brings to his numerous relatives and friends
     magnets Instead of souvenir magnets from different countries, I
     she started bringing spices. It is not news that it is spices
@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
     There is a huge selection of spices on the shelves of our local stores
     it makes sense to take them from abroad - I agree, but only
     partly And it's all about pleasant little things, iz
-    which, in fact, our life consists of))) Itak: 
+    which, in fact, our life consists of))) Itak:
     where are we taking it from? From Hungary, of course, paprika. From Greece
     Cyprus, Italy - a mass of ready-made herbs in
     different-caliber packages (choose according to the principle
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
     remember the names before the trip or buy spices
     in place and already complete - it's your choice, but a gift
     comes out glorious.`,
-      "blogs.text.history": `I have always loved history...History as a subject that
+      'blogs.text.history': `I have always loved history...History as a subject that
     they also teach stories, as well as stories that attract people
     carried into the past. But there is a story in which it is possible
     plunge into reality, feel its energy! Honor
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
     will be held here. September and October are the same
     comfortable time to combine rest on the coast and
     excursions Travel! The world is beautiful!`,
-      "blogs.text.istanbul": `My dear! It is no secret to anyone that it is independent
+      'blogs.text.istanbul': `My dear! It is no secret to anyone that it is independent
     travel makes you happy, gives you a feeling of incredible freedom, etc
     It's great to cheer up those who order air tours from me
     Istanbul, and even tours in general)), I always tell about it in detail
@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
     will guess, of course. But it is also possible to get nervous
     Warned means armed! This point is passed! Next
     magnificent city Travel! The world is beautiful!`,
-      "blogs.text.musicians": `"Monument to Bremen Musicians" is one of the most popular
+      'blogs.text.musicians': `"Monument to Bremen Musicians" is one of the most popular
     monuments of the Old Town of Riga. Must do photo place.
     It was made by the Bremen sculptor Christoy Baumgertel,
     presented to Riga as a gift by the sister city of Bremen and
@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
     a cock fulfills a secret desire, reach for
     which is the most difficult. That is, I have two more
     demand Travel! The world is beautiful!`,
-      "blogs.text.city": `How to fall in love with Istanbul Step-by-step instructions  for those
+      'blogs.text.city': `How to fall in love with Istanbul Step-by-step instructions  for those
     who, like me, is flying for the first time: Na will settle in
     the historical part of the city - Sultanahmet; visit open
     at the moment the attractions are Topkapi Palace,
@@ -343,23 +343,23 @@ document.addEventListener("DOMContentLoaded", () => {
     salad and onion in a bun for 20 lira) - everything is TASTY ! and and
     even more wild, unbridled shopping Sh And if seriously, what would it be
     You took your time in this beautiful city, you
-    come back filled with positivity Travel! Peace 
+    come back filled with positivity Travel! Peace
     beautiful!`,
     },
   };
 
   const enComments = [
     {
-      title: "August 2017",
-      name: "Alla Kravchenko",
+      title: 'August 2017',
+      name: 'Alla Kravchenko',
       description: `Tanya, we returned from Turkey, there is a crisis in Delphin Deluxe Resort
     did not touch us (there are just fewer tourists in the hotel), everything was like
     always, not top notch, food top notch - out of 10
     days only 1 day there was no red fish!! Everything is cool! Thanks!!`,
     },
     {
-      title: "October 17, 2017",
-      name: "Yana Chaika",
+      title: 'October 17, 2017',
+      name: 'Yana Chaika',
       description: `2 days ago returned with friends from
     Egypt. Rest were satisfied. Behind
     The choice turned to Tanya and did not
@@ -385,14 +385,14 @@ document.addEventListener("DOMContentLoaded", () => {
     we will only be with IG tours.`,
     },
     {
-      title: "December 13, 2017",
-      name: "Yakov Shoshyn",
+      title: 'December 13, 2017',
+      name: 'Yakov Shoshyn',
       description:
-        "In life, in order to become more successful, you need to know the whole world !!!",
+        'In life, in order to become more successful, you need to know the whole world !!!',
     },
     {
-      title: "November 8, 2017",
-      name: "Lilia Dmitrienko",
+      title: 'November 8, 2017',
+      name: 'Lilia Dmitrienko',
       description: `Already four times our holiday was a success and
     all with the help of IGtours and Tatyana personally!
     We returned from Egypt in October.
@@ -403,16 +403,16 @@ document.addEventListener("DOMContentLoaded", () => {
     Next time only to you!)`,
     },
     {
-      title: "June 2018",
-      name: "Aa Gm",
+      title: 'June 2018',
+      name: 'Aa Gm',
       description: `If you want to relax and not think about
     boarding passes, check-in
     flight, transfer, etc., then Tanya is for you
     :) Thanks`,
     },
     {
-      title: "July 2018",
-      name: "Valeria Titenko",
+      title: 'July 2018',
+      name: 'Valeria Titenko',
       description: `In the summer of 2015, the family vacationed in
     Greece on the peninsula of Sithonia (tour
     organized IG tours) Rested in
@@ -431,16 +431,16 @@ document.addEventListener("DOMContentLoaded", () => {
     peninsula.`,
     },
     {
-      title: "October 6, 2019",
-      name: "Vladislav Ryl",
+      title: 'October 6, 2019',
+      name: 'Vladislav Ryl',
       description: `Dreams Come True! Thank you so much
     for a trip to Manchester: help with
     visa, excellent choice of hotel and
     comfortable flight!`,
     },
     {
-      title: "June 5, 2020",
-      name: "Victoria Poklonskaya",
+      title: 'June 5, 2020',
+      name: 'Victoria Poklonskaya',
       description: `
     Holidays in Pattaya, January 2020 Tanyusha huge respect for this hotel!!!! We are very picky travelers. But she could more than please! I am writing after almost 5 months (I gave myself time to cool down from all emotions and our pandemic) D
     Varee Jomtien Beach 4 * is a fairy tale!!!
@@ -449,8 +449,8 @@ document.addEventListener("DOMContentLoaded", () => {
     Thank you Tanya!!!`,
     },
     {
-      title: "February 5, 2020",
-      name: "Vladislav Panasenko",
+      title: 'February 5, 2020',
+      name: 'Vladislav Panasenko',
       description: `Rested on a combo tour
     Bulgaria + Greece. In Bulgaria, we were in the ski resort of Bansko, in a hotel
     Sport Hotel 9 nights. In Greece in
@@ -460,8 +460,8 @@ document.addEventListener("DOMContentLoaded", () => {
     You are still vegetative.`,
     },
     {
-      title: "July 12, 2020",
-      name: "Elena Kunak",
+      title: 'July 12, 2020',
+      name: 'Elena Kunak',
       description: `Since September 2019, my husband and I finally flew to Italy for a week K ©!
     We flew to Rimini, lived there all the time, ate, drank, walked, and swam!
     We went on excursions to Rome, Venice, San Marino and Florence.
@@ -471,8 +471,8 @@ document.addEventListener("DOMContentLoaded", () => {
     and now I know how to get to the embassy, what Rome looks like in the evening and at night () we already have new passports and we are ready for new Adventures`,
     },
     {
-      title: "February 21, 2020",
-      name: "Tatyana Vasilyeva",
+      title: 'February 21, 2020',
+      name: 'Tatyana Vasilyeva',
       description: `Came back a week ago from a vacation.
     Zanzibar. Everyone liked it very much!
     Clean and new hotel, beautiful, turquoise sea, water temperature +29, colorful people, fresh and deliciously cooked seafood everywhere.
@@ -481,15 +481,15 @@ document.addEventListener("DOMContentLoaded", () => {
     Tanya thank you very much! You know how to turn dreams into reality!`,
     },
     {
-      title: "July 24, 2020",
-      name: "Ruslana Rudenko",
+      title: 'July 24, 2020',
+      name: 'Ruslana Rudenko',
       description: `Yesterday the family flew back from vacation.
     The hotel we chose exceeded all expectations! Gorgeous park area, turquoise sea, fresh breeze - it's all a guarantee of good emotions! Service at the hotel at a high level: cleaning of rooms, territory.
     We have been taking vacations through IGtours for the 4th year already - always at the highest level!!! Thank you)`,
     },
     {
-      title: "September 18, 2020",
-      name: "Alla Gabueva",
+      title: 'September 18, 2020',
+      name: 'Alla Gabueva',
       description: `I wanted a quiet and budget holiday.
     Hotel Kriss lived up to all expectations.
     Cozy and family friendly. Well-groomed territory with many plants, affectionate cats.) Clean pool without much chlorine smell. No frills, good and varied food.
@@ -501,8 +501,8 @@ document.addEventListener("DOMContentLoaded", () => {
     Many thanks to the organizers - true professionals`,
     },
     {
-      title: "August 09, 2020",
-      name: "Anatoly Grishchenko",
+      title: 'August 09, 2020',
+      name: 'Anatoly Grishchenko',
       description: `We are very grateful to IG tours for the clear organization of their work and the high level of professionalism.
     My family and our friends have been working closely with them for more than ten years and very successfully.
     Even in an extremely difficult year for tourism in 2020, Tatyana Vladimirovna promised and perfectly organized a family vacation for us in December in Egypt with her granddaughter.
@@ -514,19 +514,19 @@ document.addEventListener("DOMContentLoaded", () => {
     THANKS, TANECHKA.`,
     },
     {
-      title: "October 16, 2021",
-      name: "Natalia Mishchenko",
+      title: 'October 16, 2021',
+      name: 'Natalia Mishchenko',
       description: `Just got back from Egypt.
     Rested in the hotel "Albatros Vista
     Resort"5*
     My rating for the hotel is 4.5, everything is fine, only there are no fish.
     The food was delicious, the territory is beautiful, especially in the evening, the music is live and singing, the staff is cultural and fast, everything is clean, the beach is gorgeous, not every hotel in Turkey is so big. Fish and the depth of the sea - that's what was missing.
-    It's good with little kids. 
+    It's good with little kids.
     And a little more trees will grow up, you can see they just planted.`,
     },
     {
-      title: "November 15, 2021",
-      name: "Vera Katlan",
+      title: 'November 15, 2021',
+      name: 'Vera Katlan',
       description: `My first vacation was in October!
     With the help of a wonderful professional Tatyana Lomakin.
     Chose Latte Beach Hotel
@@ -535,8 +535,8 @@ document.addEventListener("DOMContentLoaded", () => {
     I took note: in good accompaniment, you can have a great rest at any time of the year!`,
     },
     {
-      title: "July 10, 2020",
-      name: "Andrey Stelmakh",
+      title: 'July 10, 2020',
+      name: 'Andrey Stelmakh',
       description: `Sri Lanka.Amagi Beach Hotel
     Came to this hotel due to quarantine
     China. I had to urgently change direction, and, in general, they did not regret it.
@@ -574,16 +574,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const comments = [
     {
-      title: "Август 2017",
-      name: "Алла Кравченко",
+      title: 'Август 2017',
+      name: 'Алла Кравченко',
       description: ` Таня, мы вернулись с Турции, в Delphin Deluxe Resort кризис
       нас не коснулся (просто в отеле меньше туристов), все было как
       всегда, не высшем уровне, питание на высшем уровне - из 10
       дней только 1 день не было красной рыбы!! Всё супер, Спасибо!!`,
     },
     {
-      title: "17 октября 2017",
-      name: "Яна Чайка",
+      title: '17 октября 2017',
+      name: 'Яна Чайка',
       description: `2 дня назад вернулись с друзьями из
       Египта. Отдыхом остались довольны. За
       Выбором обратились к Тане и не
@@ -609,13 +609,13 @@ document.addEventListener("DOMContentLoaded", () => {
       будем только с IG tours.`,
     },
     {
-      title: "13 декабря 2017",
-      name: "Yakov Shoshyn",
-      description: "В жизни, чтоб успешней стать нужно целый мир познать !!!",
+      title: '13 декабря 2017',
+      name: 'Yakov Shoshyn',
+      description: 'В жизни, чтоб успешней стать нужно целый мир познать !!!',
     },
     {
-      title: "8 ноября 2017",
-      name: "Лилия Дмитриенко",
+      title: '8 ноября 2017',
+      name: 'Лилия Дмитриенко',
       description: `Уже четыре раза наш отдых удался и
       все с помощью IGtours и лично Татьяны!
       В октябре вернулись из Египта.
@@ -626,16 +626,16 @@ document.addEventListener("DOMContentLoaded", () => {
       В следующий раз только к Вам!)`,
     },
     {
-      title: "Июнь 2018",
-      name: "Aa Gm",
+      title: 'Июнь 2018',
+      name: 'Aa Gm',
       description: `Если хочешь отдыхать, а не думать о
     посадочных талонах, регистрации на
     рейс, трансфере и т.д., Тогда тебе к Тане
     :) Спасибо`,
     },
     {
-      title: "Июль 2018",
-      name: "Валерия Титенко",
+      title: 'Июль 2018',
+      name: 'Валерия Титенко',
       description: `Летом 2015 года семьей отдыхали в
     Греции на полуострове Ситония (тур
     организовывала IG tours) Отдыхали в
@@ -654,16 +654,16 @@ document.addEventListener("DOMContentLoaded", () => {
     полуострову.`,
     },
     {
-      title: "6 октября 2019",
-      name: "Владислав Рыль",
+      title: '6 октября 2019',
+      name: 'Владислав Рыль',
       description: `Мечты сбываются! Огромное спасибо
     за поездку в Манчестер: помощь с
     визой, отличный выбор отеля и
     комфортный перелет!`,
     },
     {
-      title: "5 июня 2020",
-      name: "Виктория Поклонская",
+      title: '5 июня 2020',
+      name: 'Виктория Поклонская',
       description: `Отдых на Патае, январь 2020г. Танюше огромный респект за этот отель!!!! Мы очень требовательные к отелям путешественники. Но она смогла более чем угодить! Пишу спустя почти 5 месяцев (дала время себе остыть от всех эмоций и нашей пандемии) D
     Varee Jomtien Beach 4*- это сказка!!!
     Сервис выше всех похвал, отель реально тянет на 5*. Прочитав отзывы об отеле, я ожидала обычный азиатский отель (со всеми
@@ -671,8 +671,8 @@ document.addEventListener("DOMContentLoaded", () => {
     Танюше спасибо!!! `,
     },
     {
-      title: "5 февраля 2020",
-      name: "Владислав Панасенко",
+      title: '5 февраля 2020',
+      name: 'Владислав Панасенко',
       description: `Отдыхали в комбинированном туре
     Болгария + Греция. В Болгарии были на горнолыжном курорте Банско, в отеле
     Sport Hotel 9 ночей. В Греции в
@@ -682,19 +682,19 @@ document.addEventListener("DOMContentLoaded", () => {
     Вам ещё.`,
     },
     {
-      title: "12 июля 2020",
-      name: "Елена Кунак",
+      title: '12 июля 2020',
+      name: 'Елена Кунак',
       description: `С сентябре 2019 мы с мужем полетели, наконец, на неделю в Италию К©!
     Прилетели в Римини, там всё время жили, ели-пили, гуляли, и плавали!
     Выезжали на экскурсии в Рим, Венецию, Сан- Марино и Флоренцию.
-    Всё было отлично 
-    • но за 3 часа до трансфера в аэропорт у нас из-под носа увели сумку с паспортами!!! 
-    Жуть и кошмар!!! Не буду пересказывать детали приключения, скажу только, что наш отпуск продлился на 4 дня!)) 
+    Всё было отлично
+    • но за 3 часа до трансфера в аэропорт у нас из-под носа увели сумку с паспортами!!!
+    Жуть и кошмар!!! Не буду пересказывать детали приключения, скажу только, что наш отпуск продлился на 4 дня!))
     и теперь я знаю как попасть в посольство, как выглядит Рим вечером и ночью() у нас уже новые паспорта и мы готовы к новым Приключениям`,
     },
     {
-      title: "21 февраля 2020",
-      name: "Татьяна Васильева",
+      title: '21 февраля 2020',
+      name: 'Татьяна Васильева',
       description: `Вернулись неделю назад с отдыха из
     Занзибара. Все очень понравилось!
     Чистый и новый отель, море красивенное, бирюзовое, температура воды +29, колоритные люди, везде свежие и вкусно приготовленные морепродукты.
@@ -703,41 +703,41 @@ document.addEventListener("DOMContentLoaded", () => {
     Танечка спасибо Вам большое! Вы умеете превратить мечты в реальность!`,
     },
     {
-      title: "24 июля 2020",
-      name: "Руслана Руденко",
+      title: '24 июля 2020',
+      name: 'Руслана Руденко',
       description: `Вчера семьёй прилетели с отдыха.
     Выбранный нами отель превзошел все ожидания! Шикарная парковая зона, бирюзовое море, свежий бриз - это все залог хороших эмоций! Обслуживание в отеле на высоком уровне: уборка номеров, территории.
     Через IGtours берем отдых уже 4-й год - всегда на высшем уровне!!! Спасибо)`,
     },
     {
-      title: "18 сентября 2020",
-      name: "Алла Габуева",
+      title: '18 сентября 2020',
+      name: 'Алла Габуева',
       description: `Хотелось тихого и бюджетного отдыха.
     Отель Kriss оправдал все ожидания.
     Уютно и по-семейному. Ухоженная территория с множеством растений, ласковые кошки.) Чистый бассейн без особого запаха хлора. Без изысков, хорошее и разнообразное питание.
     Чистые комнаты. Профессиональный и доброжелательный персонал. По-домашнему уютно. Отказались брать вознаграждение при заселении.
     Единственный минус- нет собственного пляжа. Ходила на бесплатный муниципальный. Ничего.
-    Зато какие виды по пути : экзотические цветы, белые домики, набережная. И море пахнет арбузом. 
+    Зато какие виды по пути : экзотические цветы, белые домики, набережная. И море пахнет арбузом.
     Но все хорошее быстро заканчивается : успела побывать только на одной экскурсии: в Па-Муккале, которая оставила много приятных впечатлений.. и фото.)
     Рекомендую тем кто не голубых кровей.) Обещаю вернуться.)
     Огромное спасибо организаторам-настоящим профессионалам`,
     },
     {
-      title: "09 августа 2020",
-      name: "Анатолий Грищенко",
+      title: '09 августа 2020',
+      name: 'Анатолий Грищенко',
       description: `Очень признательны компании IG tours за четкую организацию своей работы и высокий уровень профессионализма.
-    Моя семья и наши друзья более десяти лет тесно сотрудничаем с ними и очень удачно. 
-    Даже в крайне тяжелый для туризма 2020 год Татьяна Владимировна пообещала и прекрасно организовала нам семейный отдых в декабре в Египте с внучкой. 
-    Она даже сумела вернуть нам расходы на сдачу ПЦР-тестов. 
-    Было очень приятно и неожиданно. 
-    Она знает что кому предложить из ее возможностей чтобы клиенты остались довольными. 
-    А возможности у не огромные. На любой вкус желание и кошелек. 
-    Кто хочет осуществить свои планы по интересным турам с отдыхом и впечатлениям - рекомендуем обращаться в эту компанию IGtours и успешный отдых вам обеспечен и все будет ОК !!! 
+    Моя семья и наши друзья более десяти лет тесно сотрудничаем с ними и очень удачно.
+    Даже в крайне тяжелый для туризма 2020 год Татьяна Владимировна пообещала и прекрасно организовала нам семейный отдых в декабре в Египте с внучкой.
+    Она даже сумела вернуть нам расходы на сдачу ПЦР-тестов.
+    Было очень приятно и неожиданно.
+    Она знает что кому предложить из ее возможностей чтобы клиенты остались довольными.
+    А возможности у не огромные. На любой вкус желание и кошелек.
+    Кто хочет осуществить свои планы по интересным турам с отдыхом и впечатлениям - рекомендуем обращаться в эту компанию IGtours и успешный отдых вам обеспечен и все будет ОК !!!
     СПАСИБО, ТАНЕЧКА.`,
     },
     {
-      title: "16 октября 2021",
-      name: "Наталья Мищенко",
+      title: '16 октября 2021',
+      name: 'Наталья Мищенко',
       description: `Только вернулись из Египта.
     Отдыхали в отеле «Albatros Vista
     Resort" 5*
@@ -746,18 +746,18 @@ document.addEventListener("DOMContentLoaded", () => {
     С детками маленькими тут хорошо. И немного деревья подрастут ещё, видно только посадили.`,
     },
     {
-      title: "15 ноября 2021",
-      name: "Вера Катлан",
+      title: '15 ноября 2021',
+      name: 'Вера Катлан',
       description: `Впервые у меня случился отдых в октябре!
     С помощью замечательного профессионала Ломакина Татьяна.
     Выбрала отель Latte Beach Hotel
-    (Кемер, Турция). 
-    Благодаря хорошо организованному быту? обходительному персоналу и прекрасной погоде 7 дней и 7 ночей пролетели быстро и с впечатлениями (способствовали экскурсии Tahtaly, Pammukale, Demre). 
+    (Кемер, Турция).
+    Благодаря хорошо организованному быту? обходительному персоналу и прекрасной погоде 7 дней и 7 ночей пролетели быстро и с впечатлениями (способствовали экскурсии Tahtaly, Pammukale, Demre).
     Взяла на заметку: в хорошем сопровождении можно в любое время года прекрасно отдохнуть!`,
     },
     {
-      title: "10 июля 2020",
-      name: "Андрей Стельмах",
+      title: '10 июля 2020',
+      name: 'Андрей Стельмах',
       description: `Шри-Ланка.Отель Amagi Beach
     Попали в этот отель из за карантина в
     Китае.Пришлось срочно менять направление, и, вообщем,не пожалели.
@@ -769,18 +769,18 @@ document.addEventListener("DOMContentLoaded", () => {
     Но ведь принесли!
     В Маравиле развлечений особо и нет.
     Тихая и спокойная деревня.
-    Местные жалуются на отсутствие туристов. 
+    Местные жалуются на отсутствие туристов.
     К нашей соседке подходил хозяин отеля, просил в другие кафе не ходить, экскурсии брать только в отеле.
     Она,естественно, все делала наоборот.
     НО это так себе,впечатлнний от отеля и персонала не испортило.
     Мы немного удивились, увидев в отеле и в самой Маравиле очень много молодежи от двадцати пяти и старше.
     Грустными и скучными они не выгля дели,скорее,наоборот.
     Наши соседи-молодая пара из
-    Питера-сказали, что они просто счастливы, после городской суеты, нервотрепки и сырости, отдохнуть десять дней в тишине и покое. 
+    Питера-сказали, что они просто счастливы, после городской суеты, нервотрепки и сырости, отдохнуть десять дней в тишине и покое.
     Самое главное-ОКЕАН и прибрежная бесконечная полоса песка под пальмами.
     В отеле есть свой пляж, можно накупаться, сполоснуться под душем у бассейна и сидеть на терассе у своего номера или у столиков под пальмами на траве.
-    Есть бассейн, но, по моему, бассейн на берегу океана-это хоккей на траве и балет на льду(Ф.Раневская). 
-    Пляжем назвать берег справа от отеля трудно, никаких зонтиков, лежаков, торговцев всякой ерундой. 
+    Есть бассейн, но, по моему, бассейн на берегу океана-это хоккей на траве и балет на льду(Ф.Раневская).
+    Пляжем назвать берег справа от отеля трудно, никаких зонтиков, лежаков, торговцев всякой ерундой.
     Только изредка рыбаки или сети чинят, или улов перебирают.
     Местные убираются во дворах,что то делают по хозяйству, их дворы подходят почти к океану.
     Там, где мы часто купались, хозяин регулярно тащил свою собаку купаться, для порядка она немного упиралась.
@@ -793,56 +793,31 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  const wrapper = document.querySelector(".swiper-wrapper");
-  let language = "en";
-
-  function getComment(data) {
-    const slides = data.map(({ title, name, description }) => {
-      const div = document.createElement("div");
-      div.className = "swiper-slide";
-      div.innerHTML += `
-      <div class="swiper-slide__title">
-        <p class="swiper-slide__name">${name}</p>
-        <p class="swiper-slide__time">${title}</p>
-      </div>
-      <p class="swiper-slide__description">${description}</p>`;
-      return div;
-    });
-
-    wrapper.innerHTML = "";
-    wrapper.append(...slides);
-  }
-
-  const getElements = (elements) => {
-    elements.map((elem) => {});
-  };
+  const wrapper = document.querySelector('.swiper-wrapper');
+  let language = 'en';
 
   function changeLang(lang) {
-    const elements = document.querySelectorAll("[data-lang]");
+    const elements = document.querySelectorAll('[data-lang]');
 
     elements.forEach((element) => {
-      element.innerText = dictionary[lang][element.getAttribute("data-lang")];
+      element.innerText = dictionary[lang][element.getAttribute('data-lang')];
     });
   }
 
-  getComment(comments);
+  const button = document.querySelector('.button');
 
-  const button = document.querySelector(".button");
-  button.addEventListener("click", () => {
-    console.log(language);
+  button.addEventListener('click', () => {
     switch (language) {
-      case "en":
-        getComment(enComments);
-        changeLang("en");
-        language = "uk";
-        button.innerText = "UK";
+      case 'en':
+        changeLang('en');
+        language = 'uk';
+        button.innerText = 'UK';
         break;
 
-      case "uk":
-        getComment(comments);
-        changeLang("uk");
-        language = "en";
-        button.innerText = "EN";
+      case 'uk':
+        changeLang('uk');
+        language = 'en';
+        button.innerText = 'EN';
 
         break;
 
@@ -850,6 +825,6 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
     }
 
-    swiper[0].update();
+    swiper.update();
   });
 });

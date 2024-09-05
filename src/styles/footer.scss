@@ -1,8 +1,8 @@
-@import "custom-media.scss";
+@import 'custom-media.scss';
 
 .footer {
+  border-top: 1px solid lightblue;
   @include padding(31px, 31px);
-  background: #f1c54db3;
 
   @include media-1350 {
     @include padding(20px, 20px);
@@ -43,7 +43,7 @@
   font-size: 3rem;
   line-height: 1.13;
   letter-spacing: 0.07em;
-  color: #000000;
+  color: #ff0000;
 
   @include media-1350 {
     font-size: 2.5rem;

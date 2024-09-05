@@ -1,12 +1,8 @@
-@import "custom-media.scss";
-
-.hero {
-  background: center/ cover no-repeat url("assets/Background_hero.png");
-}
+@import 'custom-media.scss';
 
 .header {
+  border-bottom: 1px solid lightblue;
   @include padding(10px, 10px);
-  background: #f1c54db3;
 }
 
 .header__navigation {
@@ -36,6 +32,7 @@
   @include flex;
   gap: 29px;
   color: #05489e;
+
   @include media-1350 {
     gap: 20px;
   }
@@ -101,7 +98,7 @@
 }
 
 .social-list__item a:hover {
-  background: #d8c97c;
+  background: #05489e;
   box-shadow: 0 15px 20px #1e1f1e66;
   color: white;
   transform: translateY(-7px);
@@ -143,24 +140,25 @@
   }
 }
 
-.hero__photo-box {
-  min-width: 450px;
-  position: relative;
-  right: 50px;
+// .hero__photo-box {
+//   min-width: 450px;
+//   position: relative;
+//   right: 50px;
 
-  @include media-1200 {
-    right: -60px;
-    align-self: end;
-    min-width: auto;
-  }
+//   @include media-1200 {
+//     right: -60px;
+//     align-self: end;
+//     min-width: auto;
+//   }
 
-  @include media-992 {
-    height: 500px;
-  }
-}
+//   @include media-992 {
+//     height: 500px;
+//   }
+// }
 
 .hero__photo {
   width: 100%;
+
   @include media-992 {
     width: auto;
     height: 100%;
